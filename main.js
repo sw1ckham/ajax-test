@@ -201,9 +201,9 @@ function writeToDocument(url) {   // our type argument would be film, vehicles, 
               tableRows.push(`<tr>${dataRow}</tr>`);
 
             });
-            el.innerHTML = `<table>${tableHeaders}${tableRows}</table>${pagination}`;
-        }); 
-    };
+            el.innerHTML = `<table>${tableHeaders}${tableRows}</table>${pagination}`.replace(/,/g, ""); // / indicated this is a regular experession. g means to find all instances of the comma.. donb't just stop at one. 
+        });                                                                         // Above, we want to replace all commas with an empty string. 
+    }
 
 
    // now we can modify our getData function and parse in a type... above. 
@@ -257,7 +257,12 @@ function writeToDocument(url) {   // our type argument would be film, vehicles, 
 
 // Now is displaying nicely, iterated over the data that is comming back from our API...
 // now we are going to have to look at how to display that data nicely on the page. 
+// now we have added a next and prev button we just need to tie up some loose ends.. thank god
 
+// BUG FIXING 
+// You can see all the commas at the top of the list because we are displaying our srrays as strings
+// to stop this we are going to use a .replace() methos 
+// 
 
 
 
