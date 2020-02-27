@@ -261,8 +261,13 @@ function writeToDocument(url) {   // our type argument would be film, vehicles, 
 
 // BUG FIXING 
 // You can see all the commas at the top of the list because we are displaying our srrays as strings
-// to stop this we are going to use a .replace() methos 
+// to stop this we are going to use a .replace() method. 
+
+// COMPLETE!!
 // 
+// This api was an open api, you don't need to register, 
+// When you do need to register, you will be given a key, you will need to send that each time as part of the URL when you 
+// make a request. ! 
 
 
 
